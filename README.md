@@ -1,6 +1,7 @@
-# FORKAST — token site
+# FORKAST — prediction market for crypto and esports
 
-The website for **FORKAST**, a token on Robinhood Chain.
+The website for **FORKAST**, a prediction market for crypto and esports
+on Robinhood Chain.
 
 - Contract: [`0x19D2b46b0A4D357140407D96baa207d3207Ae247`](https://robinhoodchain.blockscout.com/token/0x19D2b46b0A4D357140407D96baa207d3207Ae247)
 - Chain: Robinhood Chain (chain ID 4663)
@@ -17,13 +18,19 @@ dependencies) with:
 
 ## The widget
 
+The Stoa swap widget is added to this page by the site owner (Apip).
+The snippet to paste inside the `.widget-box` section of `index.html`,
+replacing the placeholder button:
+
 ```html
 <iframe src="https://stoadex.com/embed/swap/robinhood/0x19D2b46b0A4D357140407D96baa207d3207Ae247?pay=ETH&ref=0x1b9cA7b297a736f4FE01256C9e2d499c79dEFFb3" width="100%" height="330" style="max-width:420px;border:0" title="Swap to FORKAST on Stoa" loading="lazy"></iframe>
 ```
 
 The `ref` parameter is the referrer address for the Stoa widget bounty
 entry. Swaps through the widget earn the referrer share described at
-[stoadex.com/build](https://stoadex.com/build).
+[stoadex.com/build](https://stoadex.com/build). The snippet above was
+verified live on 22 Nov 2026: it renders "Buy FORKAST" and Stoa quotes
+ETH → FORKAST with ~0.07% price impact on 0.001 ETH.
 
 ## Run it locally
 
