@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FORKAST — Token on Robinhood Chain</title>
+<meta name="description" content="FORKAST is a token on Robinhood Chain. Buy FORKAST with ETH or USDG through Stoa.">
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; background: #0b0e14; color: #e8ecf3;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex; flex-direction: column; align-items: center;
+  }
+  header { text-align: center; padding: 56px 20px 8px; }
+  h1 { font-size: 56px; letter-spacing: 6px; margin: 0; }
+  h1 span { color: #7dd3fc; }
+  .tagline { color: #9aa7bd; font-size: 18px; margin: 12px 0 0; }
+  .chain-badge {
+    display: inline-block; margin-top: 16px; padding: 6px 14px; border: 1px solid #263248;
+    border-radius: 999px; font-size: 13px; color: #9aa7bd;
+  }
+  main { width: 100%; max-width: 560px; padding: 24px 20px 8px; }
+  .widget-box {
+    background: #111827; border: 1px solid #263248; border-radius: 20px;
+    padding: 20px; text-align: center;
+  }
+  .widget-box h2 { margin: 0 0 4px; font-size: 22px; }
+  .widget-box p { color: #9aa7bd; font-size: 14px; margin: 0 0 16px; }
+  .widget-box iframe { display: block; margin: 0 auto; background: #0b0e14; border-radius: 16px; }
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 24px 0; }
+  .step {
+    background: #111827; border: 1px solid #263248; border-radius: 14px;
+    padding: 14px; font-size: 14px; line-height: 1.5;
+  }
+  .step b { display: block; color: #7dd3fc; margin-bottom: 4px; }
+  .details {
+    background: #111827; border: 1px solid #263248; border-radius: 14px;
+    padding: 18px 20px; font-size: 14px;
+  }
+  .details h2 { margin: 0 0 12px; font-size: 18px; }
+  .row { display: flex; justify-content: space-between; gap: 12px; padding: 7px 0; border-top: 1px solid #1e293b; }
+  .row:first-of-type { border-top: 0; }
+  .row .k { color: #9aa7bd; flex-shrink: 0; }
+  .row .v { text-align: right; word-break: break-all; }
+  .row .v a { color: #7dd3fc; text-decoration: none; }
+  .row .v a:hover { text-decoration: underline; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; }
+  button.copy {
+    margin-left: 8px; padding: 2px 8px; font-size: 12px; cursor: pointer;
+    background: #1e293b; color: #e8ecf3; border: 1px solid #334155; border-radius: 6px;
+  }
+  .links { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 24px 0; }
+  .links a {
+    padding: 10px 18px; border: 1px solid #263248; border-radius: 999px;
+    color: #e8ecf3; text-decoration: none; font-size: 14px; background: #111827;
+  }
+  .links a:hover { border-color: #7dd3fc; }
+  footer { color: #64748b; font-size: 13px; text-align: center; padding: 16px 20px 40px; line-height: 1.6; }
+  footer a { color: #7dd3fc; text-decoration: none; }
+  @media (max-width: 560px) {
+    h1 { font-size: 40px; }
+    .steps { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>FORK<span>AST</span></h1>
+  <p class="tagline">A token on Robinhood Chain. Swap ETH or USDG for FORKAST with Stoa.</p>
+  <div class="chain-badge">Robinhood Chain &middot; Chain ID 4663</div>
+</header>
+
+<main>
+  <section class="widget-box">
+    <h2>Buy FORKAST</h2>
+    <p>Type an amount, see Stoa&rsquo;s live quote, and swap on Stoa.</p>
+    <iframe src="https://stoadex.com/embed/swap/robinhood/0x19D2b46b0A4D357140407D96baa207d3207Ae247?pay=ETH&amp;ref=0x1b9cA7b297a736f4FE01256C9e2d499c79dEFFb3" width="100%" height="330" style="max-width:420px;border:0" title="Swap to FORKAST on Stoa" loading="lazy"></iframe>
+  </section>
+
+  <section class="steps">
+    <div class="step"><b>1. Pick an amount</b>Enter how much ETH or USDG you want to swap.</div>
+    <div class="step"><b>2. Check the quote</b>Stoa compares every venue and shows the best route.</div>
+    <div class="step"><b>3. Swap</b>Confirm in your wallet on Robinhood Chain.</div>
+  </section>
+
+  <section class="details">
+    <h2>Token details</h2>
+    <div class="row"><span class="k">Contract</span><span class="v"><code id="ca">0x19D2b46b0A4D357140407D96baa207d3207Ae247</code><button class="copy" onclick="copyCA()">Copy</button></span></div>
+    <div class="row"><span class="k">Chain</span><span class="v">Robinhood Chain (4663)</span></div>
+    <div class="row"><span class="k">Total supply</span><span class="v">1,000,000,000 FORKAST</span></div>
+    <div class="row"><span class="k">Decimals</span><span class="v">18</span></div>
+    <div class="row"><span class="k">Swap</span><span class="v"><a href="https://stoadex.com/trade?ref=0x1b9cA7b297a736f4FE01256C9e2d499c79dEFFb3">Stoa</a></span></div>
+  </section>
+
+  <nav class="links">
+    <a href="https://robinhoodchain.blockscout.com/token/0x19D2b46b0A4D357140407D96baa207d3207Ae247">Blockscout</a>
+    <a href="https://www.geckoterminal.com/robinhood/tokens/0x19D2b46b0A4D357140407D96baa207d3207Ae247">GeckoTerminal</a>
+    <a href="https://pons.family/launchpad">Pons Launchpad</a>
+    <a href="https://stoadex.com/build">Stoa</a>
+  </nav>
+</main>
+
+<footer>
+  FORKAST &middot; Robinhood Chain<br>
+  This site is open source &mdash; <a href="https://github.com/afifm561/forkast">code on GitHub</a>.
+  Always verify the contract address before you buy.
+</footer>
+
+<script>
+function copyCA() {
+  var t = document.getElementById('ca').textContent;
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(t);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = t; document.body.appendChild(ta); ta.select();
+    document.execCommand('copy'); document.body.removeChild(ta);
+  }
+}
+</script>
+</body>
+</html>
